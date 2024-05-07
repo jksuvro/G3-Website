@@ -87,7 +87,7 @@ main{
 .team-content{
     padding: 0 76px;
 }
-.team-title{
+.team-title, .features-title{
     color: var(--Dark-01, #131313);
     font-size: 45px;
     font-weight: 700;
@@ -109,18 +109,116 @@ main{
     font-weight: 400;
     line-height: 26px; /* 162.5% */
 }
+/* Features */
+.f-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.features{
+    display: flex;
+    gap: 40px;
+}
+.features-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.f-card-title{
+    color: var(--Dark-01, #131313);
+    font-size: 20px;
+    font-weight: 600;
+}
+.f-card-content{
+    color: var(--Dark-03, #727272);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    padding-top: 10px;
+}
+.features-img img{
+    height: 90%;
+    margin-left: 50px;
+}
+.ten-years-badge{
+    border-radius: 8px;
+    background: #FF900E;
+    color: #FFF;
+    width: 342px;
+    height: 100px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    bottom: 100px;
+}
+.ten-years-badge h2{
+    color: #FFF;
+    margin: 0;
+    font-size: 65px;
+    font-weight: 700;
 
+}
 
+/* Some facts */
 
+.section-title{
+    color: var(--Dark-01, #131313);
+    font-size: 45px;
+    font-weight: 700;
+}
 
+.text-light-gray{
+    color: var(--Dark-03, #727272);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
 
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
 
+.card{
+    text-align: center;
+    width: 241.831px;
+    padding: 45px 0px;
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+}
+.card:hover{
+    background-color: antiquewhite;
+}
 
+/* Start Sponsors */
+.sponsors{
+    text-align: center;
+}
+.sponsors-content{
+    color: var(--Dark-03, #727272);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+.sponsors-logo{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
 
-
-
-
-
+/* copyrights */
+.copyright{
+    display: flex;
+    justify-content: center;
+    margin: 130px 0;
+}
+.copyright-content{
+    border-radius: 8px;
+    background: #FFF4E7;
+    width: 1440px;
+    padding: 45px 0;
+    text-align: center;
+}
 
 /* Responsive Media Quiry */
 /* Mobile Devices */
@@ -131,14 +229,24 @@ main{
     nav{
         flex-direction: column;
     }
-    .team{
+    .team, .facts-card-container, .sponsors-logo, .features{
         flex-direction: column;
+        align-items: center
     }
     .team-img{
         grid-template-columns: repeat(1, 1fr);
     }
-    .team-content{
+    .team-content, .Facts{
         text-align: center;
+    }
+    .card{
+        margin: 5px;
+    }
+    .sponsors-logo img{
+        margin: 10px 0;
+    }
+    .features-img img{
+        width: 90%;
     }
 }
 /* tablate Devices */
@@ -149,7 +257,7 @@ main{
     nav{
         flex-direction: column;
     }
-    .team{
+    .team, .features{
         flex-direction: column;
     }
     .team-img{
@@ -157,5 +265,8 @@ main{
     }
     .team-content{
         text-align: center;
+    }
+    .features-img img{
+        width: 90%;
     }
 }
